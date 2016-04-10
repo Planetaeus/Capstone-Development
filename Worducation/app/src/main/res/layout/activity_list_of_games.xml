@@ -1,0 +1,31 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="?android:dividerHorizontal"
+    android:showDividers="middle"
+    android:orientation="vertical"
+    tools:context="com.example.michael.worducation.ListOfGames">
+
+    <Button
+        android:id="@+id/picToWord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/pic_to_word"
+        style="?android:attr/buttonBarStyle"
+        android:textSize="@dimen/abc_action_button_min_width_overflow_material"
+        android:onClick="startP2W"/>
+
+    <Button
+        android:id="@+id/wordToPic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/word_to_pic"
+        style="?android:attr/buttonBarStyle"
+        android:textSize="@dimen/abc_action_button_min_width_overflow_material"
+        android:onClick="startW2P"/>
+
+</LinearLayout>

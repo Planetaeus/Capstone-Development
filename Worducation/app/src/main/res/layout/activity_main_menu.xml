@@ -1,0 +1,26 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <Button
+       android:id="@+id/words"
+       android:layout_weight="1"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:text="@string/button_words"
+       style="?android:attr/buttonBarStyle"
+       android:textSize="40sp"
+       android:onClick="goToWords"/>
+
+   <Button
+       android:id="@+id/games"
+       android:layout_weight="1"
+       android:layout_width="0dp"
+       android:layout_height="match_parent"
+       android:text="@string/button_games"
+       style="?android:attr/buttonBarStyle"
+       android:textSize="40sp"
+       android:onClick="goToGames"/>
+
+</LinearLayout>

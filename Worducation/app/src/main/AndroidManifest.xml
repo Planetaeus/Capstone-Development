@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.michael.worducation" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainMenu"
+            android:label="@string/title_activity_main_menu" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListOfGames"
+            android:label="@string/title_activity_list_of_games"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michael.worducation.MainMenu" />
+        </activity>
+        <activity
+            android:name=".ReviewOptions"
+            android:label="@string/title_activity_review_options"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.michael.worducation.MainMenu" />
+        </activity>
+
+        <class
+            android:name=".matching.Matching"
+            android:label="@string/title_activity_pics_to_words" >
+        </class>
+
+        <activity
+            android:name=".matching.PicturesToWords"
+            android:label="@string/title_activity_pictures_to_words"
+            android:parentActivityName=".ListOfGames" >
+        </activity>
+        <activity
+            android:name=".matching.WordsToPictures"
+            android:label="@string/title_activity_words_to_pictures"
+            android:parentActivityName=".ListOfGames" >
+        </activity>
+        <activity
+            android:name=".matching.ProcessResponse"
+            android:label="@string/title_activity_incorrect" >
+        </activity>
+    </application>
+
+</manifest>

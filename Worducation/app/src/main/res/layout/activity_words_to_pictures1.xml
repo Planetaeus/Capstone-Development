@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.michael.worducation.matching.p2w.PencilP2W">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/given"
+        android:layout_weight="2"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@android:dimen/app_icon_size" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <View
+            android:id="@+id/vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            />
+
+        <View
+            android:id="@+id/horizon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:id="@+id/correct"
+            android:layout_width="match_parent"
+            android:onClick="correct"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@id/vertical"
+            android:layout_alignRight="@id/vertical"
+            android:layout_above="@id/horizon"
+            android:layout_alignParentTop="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:onClick="incorrect"
+            android:layout_height="match_parent"
+            android:id="@+id/wrong1"
+            android:layout_toRightOf="@id/vertical"
+            android:layout_toEndOf="@id/vertical"
+            android:layout_above="@id/horizon"
+            android:layout_alignParentTop="true" />
+
+        <ImageButton
+            android:id="@+id/wrong2"
+            android:layout_width="match_parent"
+            android:onClick="incorrect"
+            android:layout_height="match_parent"
+            android:layout_below="@id/horizon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@id/vertical"
+            android:layout_alignRight="@id/vertical"
+            android:layout_alignParentBottom="true" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="incorrect"
+            android:id="@+id/wrong3"
+            android:layout_below="@id/horizon"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/vertical"
+            android:layout_toRightOf="@id/vertical" />
+    </RelativeLayout>
+
+
+</LinearLayout>
